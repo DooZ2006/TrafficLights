@@ -19,13 +19,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         redTrafficLightSignalView.alpha = 0.3
-        redTrafficLightSignalView.layer.cornerRadius = 75
+        redTrafficLightSignalView.layer.cornerRadius = 63
         
         yellowTrafficLightSignalView.alpha = 0.3
-        yellowTrafficLightSignalView.layer.cornerRadius = 75
+        yellowTrafficLightSignalView.layer.cornerRadius = 63
         
         greenTrafficLightSignalView.alpha = 0.3
-        greenTrafficLightSignalView.layer.cornerRadius = 75
+        greenTrafficLightSignalView.layer.cornerRadius = 63
         
         showTextButton.layer.cornerRadius = 10
     }
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             redTrafficLightSignalView.alpha = 1
             greenTrafficLightSignalView.alpha = 0.3
             showTextButton.setTitle("NEXT", for: .normal)
-        } else if yellowTrafficLightSignalView.alpha < 1 && greenTrafficLightSignalView.alpha < 1 {
+        }else if yellowTrafficLightSignalView.alpha < 1 && greenTrafficLightSignalView.alpha < 1 {
             redTrafficLightSignalView.alpha = 0.3
             yellowTrafficLightSignalView.alpha = 1
         } else if greenTrafficLightSignalView.alpha < 1 {
