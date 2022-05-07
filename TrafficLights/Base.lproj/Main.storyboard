@@ -16,24 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-AH-Sbl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFC-AH-Sbl">
                                 <rect key="frame" x="132" y="82" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PFC-AH-Sbl" secondAttribute="height" multiplier="1:1" id="iay-3g-fgS"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6aV-4Y-nEI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aV-4Y-nEI">
                                 <rect key="frame" x="132" y="240" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6aV-4Y-nEI" secondAttribute="height" multiplier="1:1" id="WND-05-FhB"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s5Y-S9-bkm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5Y-S9-bkm">
                                 <rect key="frame" x="132" y="398" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s5Y-S9-bkm" secondAttribute="height" multiplier="1:1" id="vJ6-K8-ABb"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N1-c2-9qm">
-                                <rect key="frame" x="117" y="715" width="180" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N1-c2-9qm">
+                                <rect key="frame" x="148" y="713" width="118" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="wrl-8L-QS8"/>
+                                    <constraint firstAttribute="height" constant="52" id="wsM-g8-YWw"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="START">
                                     <backgroundConfiguration key="background">
@@ -42,11 +51,33 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="showTextButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ivd-C4-CLy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6aV-4Y-nEI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Oe-Qa-4Ny"/>
+                            <constraint firstItem="6aV-4Y-nEI" firstAttribute="top" secondItem="PFC-AH-Sbl" secondAttribute="bottom" constant="8" symbolic="YES" id="C6h-Uq-cu0"/>
+                            <constraint firstItem="PFC-AH-Sbl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="GW1-IW-vTs"/>
+                            <constraint firstItem="s5Y-S9-bkm" firstAttribute="top" secondItem="6aV-4Y-nEI" secondAttribute="bottom" constant="8" symbolic="YES" id="LP7-HK-NZI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8N1-c2-9qm" secondAttribute="bottom" constant="97" id="Pi5-BD-Otw"/>
+                            <constraint firstItem="s5Y-S9-bkm" firstAttribute="height" secondItem="PFC-AH-Sbl" secondAttribute="height" id="T8s-94-ltc"/>
+                            <constraint firstItem="8N1-c2-9qm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UJt-uH-q9L"/>
+                            <constraint firstItem="8N1-c2-9qm" firstAttribute="top" secondItem="s5Y-S9-bkm" secondAttribute="bottom" constant="165" id="Z0i-Az-1QN"/>
+                            <constraint firstItem="s5Y-S9-bkm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bSN-mH-Ilk"/>
+                            <constraint firstItem="PFC-AH-Sbl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oJ6-wl-H3U"/>
+                            <constraint firstItem="6aV-4Y-nEI" firstAttribute="height" secondItem="PFC-AH-Sbl" secondAttribute="height" id="zFO-Xk-iH0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenTrafficLightSignalView" destination="s5Y-S9-bkm" id="SfL-je-8sY"/>
+                        <outlet property="redTrafficLightSignalView" destination="PFC-AH-Sbl" id="9BC-as-tfy"/>
+                        <outlet property="showTextButton" destination="8N1-c2-9qm" id="TtN-Rj-sfR"/>
+                        <outlet property="yellowTrafficLightSignalView" destination="6aV-4Y-nEI" id="94x-qF-rxH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
